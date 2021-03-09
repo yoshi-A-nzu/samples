@@ -24,8 +24,6 @@ $.noConflict();
 <!-- bootstrap - js -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
-<script type="text/javascript" src="../_administrator/css/default/js/contents.js"></script>
-	
 <link type="text/css" rel="stylesheet" href="files/style.css">
 <link type="text/css" rel="stylesheet" href="files/contents_parts_2017.css">
 <link href="files/lightbox.css" rel="stylesheet" type="text/css" media="screen">
@@ -726,9 +724,9 @@ $.noConflict();
             if (values ) {
                 // valid
                const url = "login.html" + values;*/ 
-                window.location = encodeURI(url);
+                window.location = encodeURI(url);}
 //		window.location = encodeURI(https://yoshi-a-nzu.github.io/samples/login.html#a=4d78b849-6883-41cf-8d1d-d2c4bf3ce33e&cw=10ce98b9-97b6-4a2a-94e5-fbec1312cc3b&eh=demo);
-            } /*else if (!validForm) {
+            /*} else if (!validForm) {
                 $.notify("Please fill in the form", notify_warning_t);
             } else {
               $.notify("Please fill in the form by copying the clickwrap code from the DocuSign web tool", notify_warning_t);
