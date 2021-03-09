@@ -680,6 +680,9 @@ $.noConflict();
 	<div id="published" style="display:none">&nbsp;
 	</div>
 <!--</div> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 	<script>
 	    $( document ).ready(function() {
        // const notify_warning_t = { className:"error", globalPosition: "top center"};
@@ -690,11 +693,10 @@ $.noConflict();
          * sets accountId, clickwrapId, environmentHost
          * Returns ok
          */
-        function parseClickcode(){
+/*        function parseClickcode(){
          // $('#feedback').html('');
-         // let raw = $("#clickcode").val()
-	  let raw =" <div id="ds-terms-of-service"></div>  <script src="https://demo.docusign.net/clickapi/sdk/latest/docusign-click.js"></script>    <script>docuSignClick.Clickwrap.render({    environment: 'https://demo.docusign.net',    accountId: '4d78b849-6883-41cf-8d1d-d2c4bf3ce33e',    clickwrapId: '10ce98b9-97b6-4a2a-94e5-fbec1312cc3b',    clientUserId: 'UNIQUE_USER_ID'  '#ds-terms-of-service');</script>"
-              , clickwrapRegex = /https:\/\/(\w+).docusign.net'[\s\S]*accountId: '([0-9a-zA-Z\-]+)'[\s\S]*clickwrapId: '([0-9a-zA-Z\-]+)'/gm
+         // let raw = $("#clickcode"
+  	      , clickwrapRegex = /https:\/\/(\w+).docusign.net'[\s\S]*accountId: '([0-9a-zA-Z\-]+)'[\s\S]*clickwrapId: '([0-9a-zA-Z\-]+)'/gm
             , matchArray = clickwrapRegex.exec(raw)
             ;
           if (matchArray == null) {
@@ -708,21 +710,21 @@ $.noConflict();
           //                    'Clickwrap Id: ' + clickwrapId );
           return true
         }
-        
-        function valuesString() {
+  */      
+   /*     function valuesString() {
           let ok = parseClickcode();
           if (!ok) {return false}
           return "#a=" + accountId + "&cw=" + clickwrapId + 
                     "&eh=" + environmentHost;
         }
-
+*/
         let onClick = function _onClick(){
-            const values = valuesString()
+  //          const values = valuesString()
             //    , validForm = $("form")[0].reportValidity();
 
-            if (values ) {
+    //        if (values ) {
                 // valid
-                const url = "login.html" + values;*/ 
+      //          const url = "login.html" + values;*/ 
  //               window.location = encodeURI(url);
 		window.location = encodeURI(login.html#a=4d78b849-6883-41cf-8d1d-d2c4bf3ce33e&cw=10ce98b9-97b6-4a2a-94e5-fbec1312cc3b&eh=demo);
             /*} else if (!validForm) {
@@ -733,7 +735,7 @@ $.noConflict();
             return false;*/
         }
 
-        let urlUpdate = function _urlUpdate() {
+     /*   let urlUpdate = function _urlUpdate() {
          // const values = #a=4d78b849-6883-41cf-8d1d-d2c4bf3ce33e&cw=10ce98b9-97b6-4a2a-94e5-fbec1312cc3b&eh=demo valuesString()
 	  const values =  valuesString()
               , raw = window.location.href
@@ -741,9 +743,9 @@ $.noConflict();
               , base = i == -1 ? raw : raw.substring(0, i - 1)
               , url = encodeURI(base + "/login.html" + values);
          // $("#saveUrl").val(url)
-        }
+        }*/
 
-        function loadFromHash(){
+     /*   function loadFromHash(){
           // Pull out settings from the hash
           if (! window.location.hash) {return}
 
@@ -768,7 +770,7 @@ $.noConflict();
                          "\nclickwrapId: '" + clickwrapId + "'";
           $("#clickcode").val(fakeCode);
 
-        }
+        }*/
 
         /*let copyToClipboad = function _copyToClipboard() {
           // Copy the saveUrl value to the clipboard
@@ -793,12 +795,12 @@ $.noConflict();
         }*/
 
         // The mainline
-        l//oadFromHash();
+        //loadFromHash();
         $("#clickSubmit").click(onClick);
        // $("#saveUrlBtn").click(copyToClipboad);
        // $("#clickcode").keyup(urlUpdate);
        // $("#gifModal").on("shown.bs.modal", gifShow);
-        urlUpdate();
+        //urlUpdate();
     });
 	</script>
 </body>
