@@ -690,10 +690,11 @@ $.noConflict();
          * sets accountId, clickwrapId, environmentHost
          * Returns ok
          */
-       /* function parseClickcode(){
-          $('#feedback').html('');
-          let raw = $("#clickcode").val()
-            , clickwrapRegex = /https:\/\/(\w+).docusign.net'[\s\S]*accountId: '([0-9a-zA-Z\-]+)'[\s\S]*clickwrapId: '([0-9a-zA-Z\-]+)'/gm
+        function parseClickcode(){
+         // $('#feedback').html('');
+         // let raw = $("#clickcode").val()
+	  let raw =" <div id="ds-terms-of-service"></div>  <script src="https://demo.docusign.net/clickapi/sdk/latest/docusign-click.js"></script>    <script>docuSignClick.Clickwrap.render({    environment: 'https://demo.docusign.net',    accountId: '4d78b849-6883-41cf-8d1d-d2c4bf3ce33e',    clickwrapId: '10ce98b9-97b6-4a2a-94e5-fbec1312cc3b',    clientUserId: 'UNIQUE_USER_ID'  '#ds-terms-of-service');</script>"
+              , clickwrapRegex = /https:\/\/(\w+).docusign.net'[\s\S]*accountId: '([0-9a-zA-Z\-]+)'[\s\S]*clickwrapId: '([0-9a-zA-Z\-]+)'/gm
             , matchArray = clickwrapRegex.exec(raw)
             ;
           if (matchArray == null) {
@@ -713,13 +714,13 @@ $.noConflict();
           if (!ok) {return false}
           return "#a=" + accountId + "&cw=" + clickwrapId + 
                     "&eh=" + environmentHost;
-        }*/
+        }
 
         let onClick = function _onClick(){
-            /*const values = valuesString()
-                , validForm = $("form")[0].reportValidity();
+            const values = valuesString()
+            //    , validForm = $("form")[0].reportValidity();
 
-            if (values && validForm) {
+            if (values ) {
                 // valid
                 const url = "login.html" + values;*/ 
  //               window.location = encodeURI(url);
@@ -733,8 +734,8 @@ $.noConflict();
         }
 
         let urlUpdate = function _urlUpdate() {
-          const values = #a=4d78b849-6883-41cf-8d1d-d2c4bf3ce33e&cw=10ce98b9-97b6-4a2a-94e5-fbec1312cc3b&eh=demo valuesString()
-	  //const values =  valuesString()
+         // const values = #a=4d78b849-6883-41cf-8d1d-d2c4bf3ce33e&cw=10ce98b9-97b6-4a2a-94e5-fbec1312cc3b&eh=demo valuesString()
+	  const values =  valuesString()
               , raw = window.location.href
               , i = raw.indexOf('#')
               , base = i == -1 ? raw : raw.substring(0, i - 1)
@@ -742,7 +743,7 @@ $.noConflict();
          // $("#saveUrl").val(url)
         }
 
-        /*function loadFromHash(){
+        function loadFromHash(){
           // Pull out settings from the hash
           if (! window.location.hash) {return}
 
@@ -767,7 +768,7 @@ $.noConflict();
                          "\nclickwrapId: '" + clickwrapId + "'";
           $("#clickcode").val(fakeCode);
 
-        }*/
+        }
 
         /*let copyToClipboad = function _copyToClipboard() {
           // Copy the saveUrl value to the clipboard
