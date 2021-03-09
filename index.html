@@ -696,8 +696,7 @@ $.noConflict();
          // let raw = $("#clickcode"
 		let raw =    environment: 'https://demo.docusign.net',    accountId: '4d78b849-6883-41cf-8d1d-d2c4bf3ce33e',    clickwrapId: '10ce98b9-97b6-4a2a-94e5-fbec1312cc3b'
   	      , clickwrapRegex = /https:\/\/(\w+).docusign.net'[\s\S]*accountId: '([0-9a-zA-Z\-]+)'[\s\S]*clickwrapId: '([0-9a-zA-Z\-]+)'/gm
-            , matchArray = clickwrapRegex.exec(raw)
-            ;
+            , matchArray = clickwrapRegex.exec(raw) ;
           if (matchArray == null) {
             return false; // no cigar!
           }
