@@ -44,7 +44,7 @@ $.noConflict();
 <script type="text/javascript" src="files/header.js.ダウンロード"></script>
 
 <link href="files/all.css" rel="stylesheet">
-    <script src="script.js" defer>/*document.addEventListener("DOMContentLoaded", function() {
+<!--    <script src="script.js" defer>/*document.addEventListener("DOMContentLoaded", function() {
             function createParagraph() {
 	    let para = document.createElement('p');
 	    para.textContent = 'ボタンが押されました!';
@@ -58,11 +58,11 @@ $.noConflict();
 	    }
 	     });*/
 	    
-    </script>
+    </script>-->
   </head>
 <!--  <body> -->
 <body id="bootstrap_template" class="column1">
-    <button>Click me</button>
+   <!--<button>Click me</button> -->
 	<div id="upper">
 		<div class="container23  ">
 		</div>
@@ -444,6 +444,8 @@ $.noConflict();
 				</div>
 			</div>
 		</div>
+	<button id="clickSubmit" type="submit" class="btn btn-primary">テストを申し込む</button>
+
 <!-- ************************************************** // id="container" ************************************************** -->
 
 <!-- id="topicpath" -->
@@ -678,5 +680,125 @@ $.noConflict();
 	<div id="published" style="display:none">&nbsp;
 	</div>
 <!--</div> -->
+	<script>
+	    $( document ).ready(function() {
+       // const notify_warning_t = { className:"error", globalPosition: "top center"};
+
+        let accountId, clickwrapId, environmentHost;
+
+        /**
+         * sets accountId, clickwrapId, environmentHost
+         * Returns ok
+         */
+        function parseClickcode(){
+       /*   $('#feedback').html('');
+          let raw = $("#clickcode").val()
+            , clickwrapRegex = /https:\/\/(\w+).docusign.net'[\s\S]*accountId: '([0-9a-zA-Z\-]+)'[\s\S]*clickwrapId: '([0-9a-zA-Z\-]+)'/gm
+            , matchArray = clickwrapRegex.exec(raw)
+            ;
+          if (matchArray == null) {
+            return false; // no cigar!
+          }
+          environmentHost = matchArray[1];
+          accountId       = matchArray[2];
+          clickwrapId     = matchArray[3];
+          //$('#feedback').html('Environment: ' + environmentHost + '<br/>' +
+          //                    'Account Id: '   + accountId + '<br/>' +
+          //                    'Clickwrap Id: ' + clickwrapId );
+          return true
+        }
+        
+        function valuesString() {
+          let ok = parseClickcode();
+          if (!ok) {return false}
+          return "#a=" + accountId + "&cw=" + clickwrapId + 
+                    "&eh=" + environmentHost;
+        }*/
+
+        let onClick = function _onClick(){
+            /*const values = valuesString()
+                , validForm = $("form")[0].reportValidity();
+
+            if (values && validForm) {
+                // valid
+                const url = "login.html" + values;*/ 
+ //               window.location = encodeURI(url);
+		window.location = encodeURI(login.html#a=4d78b849-6883-41cf-8d1d-d2c4bf3ce33e&cw=10ce98b9-97b6-4a2a-94e5-fbec1312cc3b&eh=demo);
+            /*} else if (!validForm) {
+                $.notify("Please fill in the form", notify_warning_t);
+            } else {
+              $.notify("Please fill in the form by copying the clickwrap code from the DocuSign web tool", notify_warning_t);
+            }
+            return false;
+        }*/
+
+        let urlUpdate = function _urlUpdate() {
+          const values = #a=4d78b849-6883-41cf-8d1d-d2c4bf3ce33e&cw=10ce98b9-97b6-4a2a-94e5-fbec1312cc3b&eh=demo valuesString()
+	  //const values =  valuesString()
+              , raw = window.location.href
+              , i = raw.indexOf('#')
+              , base = i == -1 ? raw : raw.substring(0, i - 1)
+              , url = encodeURI(base + "/login.html" + values);
+         // $("#saveUrl").val(url)
+        }
+
+        /*function loadFromHash(){
+          // Pull out settings from the hash
+          if (! window.location.hash) {return}
+
+          let raw = decodeURI(window.location.hash).substr(1)
+            , eachParamsArr = raw.split('&')
+            , obj = {};
+          if (eachParamsArr && eachParamsArr.length) {
+              eachParamsArr.map(function (param) {
+                  let keyValuePair = param.split('=')
+                  let key = keyValuePair[0];
+                  let value = keyValuePair[1];
+                  obj[key] = value;
+              })
+          }
+          accountId = obj.a;
+          clickwrapId = obj.cw;
+          environmentHost = obj.eh;
+          
+          let fakeCode = "// Clickwrap settings: \n" +
+                         "site: 'https://" + environmentHost + ".docusign.net'" + 
+                         "\naccountId: '" + accountId + "'" +
+                         "\nclickwrapId: '" + clickwrapId + "'";
+          $("#clickcode").val(fakeCode);
+
+        }*/
+
+        /*let copyToClipboad = function _copyToClipboard() {
+          // Copy the saveUrl value to the clipboard
+          // See https://stackoverflow.com/q/22581345/64904
+          var $temp = $("<input>");
+          $("body").append($temp);
+          $temp.val($("#saveUrl").val()).select();
+          document.execCommand("copy");
+          $temp.remove();
+        }
+
+        let gifShow = function _gifShow() {
+          // See https://stackoverflow.com/a/21104927/64904
+          let src="assets/clickwrap.gif"
+            , timeout = 0 // no delay
+            , $gif1 = $("#gif1")
+            ;
+            $gif1.show();
+            setTimeout(function() {
+                $gif1.attr('src', src);
+            }, timeout);
+        }*/
+
+        // The mainline
+        l//oadFromHash();
+        $("#clickSubmit").click(onClick);
+       // $("#saveUrlBtn").click(copyToClipboad);
+       // $("#clickcode").keyup(urlUpdate);
+       // $("#gifModal").on("shown.bs.modal", gifShow);
+        urlUpdate();
+    });
+	</script>
 </body>
 </html>
