@@ -693,9 +693,10 @@ $.noConflict();
          * sets accountId, clickwrapId, environmentHost
          * Returns ok
          */
-/*        function parseClickcode(){
+        function parseClickcode(){
          // $('#feedback').html('');
          // let raw = $("#clickcode"
+		let raw =    environment: 'https://demo.docusign.net',    accountId: '4d78b849-6883-41cf-8d1d-d2c4bf3ce33e',    clickwrapId: '10ce98b9-97b6-4a2a-94e5-fbec1312cc3b'
   	      , clickwrapRegex = /https:\/\/(\w+).docusign.net'[\s\S]*accountId: '([0-9a-zA-Z\-]+)'[\s\S]*clickwrapId: '([0-9a-zA-Z\-]+)'/gm
             , matchArray = clickwrapRegex.exec(raw)
             ;
@@ -710,24 +711,24 @@ $.noConflict();
           //                    'Clickwrap Id: ' + clickwrapId );
           return true
         }
-  */      
-   /*     function valuesString() {
+        
+        function valuesString() {
           let ok = parseClickcode();
           if (!ok) {return false}
           return "#a=" + accountId + "&cw=" + clickwrapId + 
                     "&eh=" + environmentHost;
         }
-*/
+
         let onClick = function _onClick(){
-  //          const values = valuesString()
+            const values = valuesString()
             //    , validForm = $("form")[0].reportValidity();
 
-    //        if (values ) {
+            if (values ) {
                 // valid
-      //          const url = "login.html" + values;*/ 
- //               window.location = encodeURI(url);
-		window.location = encodeURI(https://yoshi-a-nzu.github.io/samples/login.html#a=4d78b849-6883-41cf-8d1d-d2c4bf3ce33e&cw=10ce98b9-97b6-4a2a-94e5-fbec1312cc3b&eh=demo);
-            /*} else if (!validForm) {
+               const url = "login.html" + values;*/ 
+                window.location = encodeURI(url);
+//		window.location = encodeURI(https://yoshi-a-nzu.github.io/samples/login.html#a=4d78b849-6883-41cf-8d1d-d2c4bf3ce33e&cw=10ce98b9-97b6-4a2a-94e5-fbec1312cc3b&eh=demo);
+            } /*else if (!validForm) {
                 $.notify("Please fill in the form", notify_warning_t);
             } else {
               $.notify("Please fill in the form by copying the clickwrap code from the DocuSign web tool", notify_warning_t);
@@ -735,7 +736,7 @@ $.noConflict();
             return false;*/
         }
 
-     /*   let urlUpdate = function _urlUpdate() {
+        let urlUpdate = function _urlUpdate() {
          // const values = #a=4d78b849-6883-41cf-8d1d-d2c4bf3ce33e&cw=10ce98b9-97b6-4a2a-94e5-fbec1312cc3b&eh=demo valuesString()
 	  const values =  valuesString()
               , raw = window.location.href
@@ -743,9 +744,9 @@ $.noConflict();
               , base = i == -1 ? raw : raw.substring(0, i - 1)
               , url = encodeURI(base + "/login.html" + values);
          // $("#saveUrl").val(url)
-        }*/
+        }
 
-     /*   function loadFromHash(){
+        function loadFromHash(){
           // Pull out settings from the hash
           if (! window.location.hash) {return}
 
@@ -770,8 +771,7 @@ $.noConflict();
                          "\nclickwrapId: '" + clickwrapId + "'";
           $("#clickcode").val(fakeCode);
 
-        }*/
-
+        }
         /*let copyToClipboad = function _copyToClipboard() {
           // Copy the saveUrl value to the clipboard
           // See https://stackoverflow.com/q/22581345/64904
@@ -795,12 +795,12 @@ $.noConflict();
         }*/
 
         // The mainline
-        //loadFromHash();
+        loadFromHash();
         $("#clickSubmit").click(onClick);
        // $("#saveUrlBtn").click(copyToClipboad);
        // $("#clickcode").keyup(urlUpdate);
        // $("#gifModal").on("shown.bs.modal", gifShow);
-        //urlUpdate();
+        urlUpdate();
     });
 	</script>
 </body>
