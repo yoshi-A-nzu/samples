@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <title>Clickwrap protected site example</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        .jumbotron {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+            margin-bottom: 0;
+            background-color: #fff;
+        }
+        
+        @media (min-width: 768px) {
+            .jumbotron {
+                padding-top: 6rem;
+                padding-bottom: 6rem;
+            }
+        }
+        
+        .jumbotron p:last-child {margin-bottom: 0;}
+        .jumbotron-heading {font-weight: 300;}
+        .jumbotron .container {max-width: 40rem;}
+        footer {padding-top: 3rem; padding-bottom: 3rem;}
+        footer p {margin-bottom: .25rem;}
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="collapse bg-dark" id="navbarHeader">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8 col-md-7 py-4">
+                        <h4 class="text-white">About</h4>
+                        <p class="text-muted">This is an example page that is <strong>protected</strong> by the clickwrap agreement</p>
+                    </div>
+                    <div class="col-sm-4 offset-md-1 py-4">
+                        <h4 class="text-white">Contact</h4>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-white">Follow on Twitter</a></li>
+                            <li><a href="#" class="text-white">Like on Facebook</a></li>
+                            <li><a href="#" class="text-white">Email me</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="navbar navbar-dark bg-dark shadow-sm">
+            <div class="container d-flex justify-content-between">
+                <a href="#" class="navbar-brand d-flex align-items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2" viewBox="0 0 24 24" focusable="false">
+                        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                        <circle cx="12" cy="13" r="4"></circle>
+                    </svg>
+                    <strong>An example web site</strong>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main role="main">
+
+        <section class="jumbotron text-center">
+            <div class="container">
+                <h1 class="jumbotron-heading">An example website</h1>
+                <p class=" lead text-muted">This example website page is only shown after the user has logged in and completed the clickwrap as needed.</p>
+                <p class="">
+                    <a id="loginAgain" href="#" class="btn btn-secondary my-2">Login again</a>
+                </p>
+                <form>
+                    <p><strong>Tip! you can save the login page's url for later testing by your colleagues: </strong>
+                        <br /><input type="text" class="form-control input-sm" id="saveUrl">
+                        <button class="ml-1 mt-2 btn btn-sm btn-outline-info" type="button" id="saveUrlBtn"
+                            aria-expanded="false" aria-label="Copy to clipboard">
+                            Copy to clipboard
+                        </button>  
+                    </p>
+                </form>        
+            </div>
+        </section>
+
+        <div>
+            <div class="container">
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut hendrerit dolor eu tellus blandit, id iaculis ligula congue. In pellentesque cursus convallis. Aliquam posuere tristique interdum. Sed lacinia massa nec arcu lobortis, non aliquet nunc egestas. Cras imperdiet, leo eu scelerisque consequat, massa nisl sagittis sem, nec mattis quam nibh vel tortor. Curabitur eros urna, vestibulum eget lacus sit amet, dapibus tristique diam. Quisque faucibus ipsum sit amet tincidunt gravida.
+                </p>
+                <p> Morbi aliquet nulla ut condimentum feugiat. Cras id pretium ligula. Quisque interdum dui nunc, a pellentesque justo dapibus quis. Aliquam quis justo at orci aliquam condimentum vitae in odio. Quisque vehicula scelerisque mauris. Aliquam erat volutpat. Etiam lacinia sem dui, at laoreet erat porttitor eget. In efficitur nisi vel fermentum mattis. Integer venenatis ac erat sit amet feugiat.
+                </p>
+                <p> Maecenas est mi, viverra nec lacus vel, semper feugiat enim. In sed pretium massa, nec suscipit tortor. Vestibulum lobortis tellus vitae odio mollis, scelerisque condimentum justo congue. Donec quis arcu sit amet velit semper lobortis quis non metus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc hendrerit quis metus non condimentum. Nullam consectetur eleifend sem ut ultricies. Maecenas iaculis lacus sit amet velit bibendum, a dapibus augue fermentum. Quisque vestibulum eros blandit sodales pellentesque. Nulla luctus ipsum sit amet libero posuere interdum. Mauris ex mi, fringilla eu lorem ut, lacinia malesuada nisi. Etiam viverra elit lorem, eget ultricies turpis accumsan vel. Aenean semper viverra consequat. In commodo sagittis ante id pretium. Aliquam tortor ligula, volutpat eu luctus vitae, egestas sit amet purus. Mauris faucibus hendrerit ex nec mattis.
+                </p>
+                <p> Nulla vel urna at sapien lobortis sollicitudin. Ut eu gravida elit. Nulla sit amet est a ex pharetra efficitur. Mauris nec suscipit lorem. Duis sollicitudin venenatis gravida. Cras tempor metus tellus, ut fermentum nisl rutrum et. Sed elit massa, porta varius placerat vitae, condimentum vel sapien. Donec sit amet lacus a justo imperdiet porta.
+                </p>
+                <p> Duis vitae nisl fringilla, vehicula erat at, lobortis sem. Mauris sem dolor, porttitor nec pharetra vel, sollicitudin vel ante. Praesent egestas a nibh eget luctus. In mattis dui vitae turpis ultricies, sed consequat ante imperdiet. Nam luctus tincidunt sollicitudin. Aenean metus metus, feugiat vel dolor et, suscipit pulvinar neque. Aliquam dapibus mattis dolor id scelerisque. Vestibulum maximus ultricies lacinia. Proin mollis, ipsum vitae congue pharetra, sapien eros accumsan sem, eget bibendum velit sem et magna. Morbi hendrerit vehicula arcu, id auctor ex laoreet ut. Nunc a lorem faucibus, suscipit orci et, eleifend dui.
+                </p>
+            </div>
+        </div>
+
+    </main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    $( document ).ready(function() {
+
+        let loginAgain = function _loginAgain() {
+            window.history.back()
+        }
+
+        let copyToClipboad = function _copyToClipboard() {
+          // Copy the saveUrl value to the clipboard
+          // See https://stackoverflow.com/q/22581345/64904
+          var $temp = $("<input>");
+          $("body").append($temp);
+          $temp.val($("#saveUrl").val()).select();
+          document.execCommand("copy");
+          $temp.remove();
+        }
+
+        // The mainline
+        $("#loginAgain").click(loginAgain);
+        $("#saveUrlBtn").click(copyToClipboad);
+
+        // Set saveUrl
+        // We don't have access to the url from window.history.
+        // So we re-create the url:
+        let siteUrl = window.location.href
+          , loginUrl =  siteUrl.replace('site.html', 'login.html')
+          ;
+        $("#saveUrl").val(loginUrl);
+    });
+</script>
+</body>
+</html>
