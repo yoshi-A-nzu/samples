@@ -685,13 +685,13 @@ $.noConflict();
 	    $( document ).ready(function() {
        // const notify_warning_t = { className:"error", globalPosition: "top center"};
 
-        let accountId, clickwrapId, environmentHost;
+        //let accountId, clickwrapId, environmentHost;
 
         /**
          * sets accountId, clickwrapId, environmentHost
          * Returns ok
          */
-        function parseClickcode(){
+      /*  function parseClickcode(){
          // $('#feedback').html('');
          // let raw = $("#clickcode"
 		let raw =    environment: 'https://demo.docusign.net',    accountId: '4d78b849-6883-41cf-8d1d-d2c4bf3ce33e',    clickwrapId: '10ce98b9-97b6-4a2a-94e5-fbec1312cc3b'
@@ -714,17 +714,17 @@ $.noConflict();
           if (!ok) {return false}
           return "#a=" + accountId + "&cw=" + clickwrapId + 
                     "&eh=" + environmentHost;
-        }
+        }*/
 
         let onClick = function _onClick(){
-            const values = valuesString()
+    //        const values = valuesString()
             //    , validForm = $("form")[0].reportValidity();
 
-            if (values ) {
+  //          if (values ) {
                 // valid
-               const url = "login.html" + values;*/ 
-                window.location = encodeURI(url);}
-//		window.location = encodeURI(https://yoshi-a-nzu.github.io/samples/login.html#a=4d78b849-6883-41cf-8d1d-d2c4bf3ce33e&cw=10ce98b9-97b6-4a2a-94e5-fbec1312cc3b&eh=demo);
+//               const url = "login.html" + values;*/ 
+         //       window.location = encodeURI(url);}
+		window.location = encodeURI("login.html#a=4d78b849-6883-41cf-8d1d-d2c4bf3ce33e&cw=10ce98b9-97b6-4a2a-94e5-fbec1312cc3b&eh=demo");
             /*} else if (!validForm) {
                 $.notify("Please fill in the form", notify_warning_t);
             } else {
@@ -733,7 +733,7 @@ $.noConflict();
             return false;*/
         }
 
-        let urlUpdate = function _urlUpdate() {
+       /* let urlUpdate = function _urlUpdate() {
          // const values = #a=4d78b849-6883-41cf-8d1d-d2c4bf3ce33e&cw=10ce98b9-97b6-4a2a-94e5-fbec1312cc3b&eh=demo valuesString()
 	  const values =  valuesString()
               , raw = window.location.href
@@ -768,7 +768,7 @@ $.noConflict();
                          "\nclickwrapId: '" + clickwrapId + "'";
           $("#clickcode").val(fakeCode);
 
-        }
+        }*/
         /*let copyToClipboad = function _copyToClipboard() {
           // Copy the saveUrl value to the clipboard
           // See https://stackoverflow.com/q/22581345/64904
@@ -792,12 +792,12 @@ $.noConflict();
         }*/
 
         // The mainline
-        loadFromHash();
+    //    loadFromHash();
         $("#clickSubmit").click(onClick);
        // $("#saveUrlBtn").click(copyToClipboad);
        // $("#clickcode").keyup(urlUpdate);
        // $("#gifModal").on("shown.bs.modal", gifShow);
-        urlUpdate();
+     //   urlUpdate();
     });
 	</script>
 </body>
