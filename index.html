@@ -444,7 +444,7 @@ $.noConflict();
 				</div>
 			</div>
 		</div>
-	<button id="clickSubmit" type="submit" class="btn btn-primary">テストを申し込む</button>
+	<button id="clickSubmit">テストを申し込む</button>
 
 <!-- ************************************************** // id="container" ************************************************** -->
 
@@ -690,8 +690,8 @@ $.noConflict();
          * sets accountId, clickwrapId, environmentHost
          * Returns ok
          */
-        function parseClickcode(){
-       /*   $('#feedback').html('');
+       /* function parseClickcode(){
+          $('#feedback').html('');
           let raw = $("#clickcode").val()
             , clickwrapRegex = /https:\/\/(\w+).docusign.net'[\s\S]*accountId: '([0-9a-zA-Z\-]+)'[\s\S]*clickwrapId: '([0-9a-zA-Z\-]+)'/gm
             , matchArray = clickwrapRegex.exec(raw)
@@ -729,8 +729,8 @@ $.noConflict();
             } else {
               $.notify("Please fill in the form by copying the clickwrap code from the DocuSign web tool", notify_warning_t);
             }
-            return false;
-        }*/
+            return false;*/
+        }
 
         let urlUpdate = function _urlUpdate() {
           const values = #a=4d78b849-6883-41cf-8d1d-d2c4bf3ce33e&cw=10ce98b9-97b6-4a2a-94e5-fbec1312cc3b&eh=demo valuesString()
