@@ -1,0 +1,119 @@
+@charset "utf-8";
+
+/* ---------------------------------------------------------------------------------------- 
+
+	エディター用のスタイル
+
+---------------------------------------------------------------------------------------- */
+
+#editor {
+	border: none;
+	background-image: none;
+	background: #fff;
+}
+
+#cms_message_row li {
+	background: none !important;
+}
+
+.dialog table.table_window,
+.dialog table.table_window th,
+.dialog table.table_window td {
+	line-height: 1;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+body#header,
+body#opt1,
+body#opt2,
+body#opt3 {
+	border: none;
+}
+
+body#main,
+body#upper,
+body#bottom,
+body#side,
+body#right {
+	border: none;
+}
+
+body#main {
+	background: #fff;
+}
+
+body#header {
+	width: 1005px;
+	margin: 0 auto !important;
+}
+
+body#side,
+body#right {
+	width: 100% !important;
+}
+
+#cms_contents_area #main_visual .bg_header_content {
+	animation: none;
+	-webkit-animation: none;
+	opacity: 1;
+	top: 30%;
+	left: 35%;
+	transform: none;
+	-webkit-transform: none;
+}
+
+#cms_contents_area #header:before,
+#cms_contents_area div[class^="parts_img_type"] a:before,
+#cms_contents_area div[class^="parts_img_type"] a:after {
+	display: none;
+}
+
+#upper div[id^="EDIT-navigation"],
+#upper div[id^="EDIT-navigation"] .box {
+	margin: 0 !important;
+}
+
+#upper > div[id^="EDIT-free_parts"]:first-child {
+	padding: 0;
+}
+
+.column1 #cms_contents_area #main .container .cms_block > div > h1:first-child,
+.column1 #cms_contents_area #main .cms_block > div > h1:first-child {
+	/* margin-top: -50px; */
+}
+
+
+/* ---------------------------------------------------------------------------------------- 
+
+	ログインのスタイル
+
+---------------------------------------------------------------------------------------- */
+
+#LoginDialog table,
+#LoginDialog th,
+#LoginDialog td {
+	border: none;
+	background: transparent;
+}
+
+
+
+/* ---------------------------------------------------------------------------------------- 
+
+	bootstrap調整
+
+---------------------------------------------------------------------------------------- */
+.cms-easy-edit form input[disabled]{
+	margin:0;
+	padding:0;
+}
+
+.btn{
+	cursor:text;
+  -moz-user-select: text;  
+  -webkit-user-select: auto;  
+  -ms-user-select: text;  
+  user-select: text;
+}
